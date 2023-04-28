@@ -11,6 +11,7 @@ question = st.text_area(label="Ask something")
 button = st.button("Get Answer")
 
 if button:
+
   with st.spinner("thinking..."):
     question = HumanMessage(content=question)
     answer = llm([question])
